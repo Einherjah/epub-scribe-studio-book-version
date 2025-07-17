@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Arquivo de segredos que NUNCA deve ir para o repositório
+.env
