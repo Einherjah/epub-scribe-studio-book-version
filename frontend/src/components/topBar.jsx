@@ -3,10 +3,9 @@ import { AppBar, Toolbar, Typography, Box, Avatar, Button } from '@mui/material'
 
 function TopBar({ user, onLogout }) {
   return (
-    // A AppBar agora é 'fixed' e tem um zIndex alto para ficar sempre na frente
     <AppBar
       position="fixed"
-      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, boxShadow: 'none', borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >
       <Toolbar>
         <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>

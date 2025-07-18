@@ -1,15 +1,3 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-/* AQUI ESTÁ A MUDANÇA CRÍTICA */
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -19,4 +7,31 @@ html, body, #root {
 
 body {
   background-color: #f4f4f4;
+}
+
+/* --- REGRAS DEFINITIVAS PARA ESCONDER A BARRA DO EMULADOR --- */
+
+/* Esconde a versão <p> que encontramos (a atual) */
+.firebase-emulator-warning {
+  display: none !important;
+}
+
+/* Esconde a versão <iframe> que existia antigamente (por garantia) */
+body > iframe {
+  display: none !important;
+}
+
+/* Estilo para os botões da barra de ferramentas quando estiverem ativos */
+.is-active {
+  background-color: #e0eaff;
+  color: #3366ff;
+}
+
+/*
+  Regra de CSS poderosa e específica para garantir que a seleção de texto
+  no editor Tiptap (que usa a classe .ProseMirror) seja sempre permitida.
+  O '!important' garante que esta regra vença qualquer outra.
+*/
+.tiptap-container .ProseMirror {
+  user-select: text !important;
 }
